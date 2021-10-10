@@ -16,7 +16,12 @@ Apart for this requirements, the owner is open to any type of game, topic or gen
 ## Proposed Solution
 
 ## Success Criteria
-
+### 1. The game has to be entirely text-based.
+### 2. The game must record the time played.
+### 3. The game must record the player's name and score.
+### 4. The game will provide a checkpoint for each chapter.
+### 5. The game will have a survey at the end which measures the satisfactory level.
+### 6. The game will provide three different types of ending.
 
 # Criteria B: Design
 
