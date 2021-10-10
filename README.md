@@ -25,8 +25,14 @@ Apart for this requirements, the owner is open to any type of game, topic or gen
 ## Flow Diagrams
 
 ## Record of Tasks
-| Task No | Planned Action | Planned Outcome | Time estimate | Target completion date | Criterion |
-|---------|----------------|-----------------|---------------|------------------------|-----------|
-|         |                |                 |               |                        |           |
-|         |                |                 |               |                        |           |
-|         |                |                 |               |                        |           |
+| Task No | Planned Action                    | Planned Outcome                                                                                                       | Time estimate | Target completion date | Criterion |
+|---------|-----------------------------------|-----------------------------------------------------------------------------------------------------------------------|---------------|------------------------|-----------|
+| 01      | Time and Score for the game       | A system to measure the time and score the user took.                                                                 | 10min         | 2021.Sep.23            | C         |
+| 02      | Recording database for Game       | Database for the user's name, time to finish the game, and the score.                                                 | 10min         | 2021.Sep.25            | C         |
+| 03      | Unit Test: Caesar cypher encoding | To check the function works as expected. Test with the input of "Hello" with code of 3, the outcome becomes "Khoor".  | 10min         | 2021.Oct.6             | C         |
+|         |                                   |                                                                                                                       |               |                        |           |
+|         |                                   |                                                                                                                       |               |                        |           |
+|         |                                   |                                                                                                                       |               |                        |           |
+|         |                                   |                                                                                                                       |               |                        |           |
+|         |                                   |                                                                                                                       |               |                        |           |
+|         |                                   |                                                                                                                       |               |                        |           |
