@@ -21,6 +21,7 @@ Apart for this requirements, the owner is open to any type of game, topic or gen
 # Criteria B: Design
 
 ## System Diagram
+![](System_Diagram.jpg)
 
 ## Flow Diagrams
 
