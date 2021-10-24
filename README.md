@@ -37,6 +37,15 @@ For coding the game, I will be using Python 3.7. since this is the only language
 ![](System_Diagram.png)
 
 ## Flow Diagrams
+### Chapter Flow (While statement True loop)
+*It is just an example and so the details are not shown.*
+![](Diagram1.png)
+
+### Saving System
+![](Diagram2.png)
+
+### Loading System
+![](Diagram3.png)
 
 ## Record of Tasks
 | Task No | Planned Action                          | Planned Outcome                                                                                                                          | Time estimate | Target completion date | Criterion |   |   |
