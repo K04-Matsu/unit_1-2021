@@ -39,6 +39,8 @@ For coding the game, I will be using Python 3.7. since this is the only language
 ## Flow Diagrams
 ### Chapter Flow (While statement True loop)
 *It is just an example and so the details are not shown.*
+
+
 ![](Diagram1.png)
 
 ### Saving System
