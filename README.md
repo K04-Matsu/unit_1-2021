@@ -14,6 +14,14 @@ The owner of the local game shop is an enthusiast of classic computer games. He 
 Apart for this requirements, the owner is open to any type of game, topic or genre.
 
 ## Proposed Solution
+### Statement
+I will design and create a text-based game for a client who is the local game shop. The category of the game will be a RPG mystery game and will be created in python 3.7. The game will be made in the duration of 3 weeks and will be evaluated according to the criteria.
+
+### Description of the Game
+The game is called “Ember”. The game is about 2 male teenagers going into the famous haunted house in the forest for their lost friend. Through this research, the main character will encounter mysteries of the house and find out what is the truth behind everything of the incidents around the house. The game is a RPG mystery game with little horror essence included. The time limit of the game is 1hour. Throughout the game, the player will make various decisions based on the area they are in, and depending on the selection the game can change drastically. For instance, to make it to the true ending, the player will be required to make one specific choice at the early stage of the game. During the game, there will be quizzes. The quizzes that appear during the game are mostly original. However, some of them are famous riddles, some of them are based on IQ tests. As the player makes progress and goes to different chapters, the progress will be saved into another file. There are three types of endings, countless decisions. I made it as challenging as possible so that the player can enjoy the game.
+
+### Justification 
+For coding the game, I will be using Python 3.7. since this is the only language I can create a product. The coding will contain all the knowledge I earned during the computer science classes. The OS will be macbook Catalina, this is because as I did some research, I found out that python now fully supports Macbook OS. The application will pycharm, the reason for this is because pycharm has easy to see error highlights which is very helpful for coding beginners like me. Additionally, pycharm has high processing speed and allows me to do more effecient coding.
 
 ## Success Criteria
 ### 1. The game has to be entirely text-based.
