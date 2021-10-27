@@ -71,6 +71,7 @@ For coding the game, I will be using Python 3.7. since this is the only language
 
 
 ## Criteria C: Code
+![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=+) `Additonal File will be needed to run the code`
 
 ```.py
 import pickle
