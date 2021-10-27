@@ -90,7 +90,8 @@ For coding the game, I will be using Python 3.7. since this is the only language
 
 ## Criteria C: Code
 ```diff
--Additonal File will be needed to run the code
+-Additonal File will be needed to run the code. Download from below \n
+[https://drive.google.com/drive/folders/1s-_a8GLP6LLvaKwI39ITBs9y8LS8OYGS?usp=sharing]
 ```
 ```.py
 import os
