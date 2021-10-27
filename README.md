@@ -86,13 +86,16 @@ For coding the game, I will be using Python 3.7. since this is the only language
 | Run Chapter2                                                  | Integration Test | Run through chapter2 with various inputs on all decisions                                | No bugs, function effectively used, compatibility in global statements, quizes working.                        |
 | Run Chapter3                                                  | Integration Test | Run through chapter3 with various inputs on all decisions                                | No bugs, function effectively used, compatibility in global statements, quizes working.                        |
 | Run Ember                                                     | System Test      | Run through the whole game for all endings.                                              | No bugs, function effectively used, compatibility in global statements, quizes working, all endings reachable. |
+| Satisfaction checker                                          | Module Test      | Player inputs satisfactory level from the scale of 1 to 5.                               | If validable input, append to Satisfactory.txt, if invalid input, repeat question.                             |
 
 ## Criteria C: Code
 ```diff
 -Additonal File will be needed to run the code
 ```
 ```.py
-import pickle
+import os
+
+from clearconsole import clear
 import time
 import subprocess
 ryu_dead = False
@@ -101,11 +104,12 @@ inventory = []
 savepoint = []
 lived = True
 in_entrance = False
+def clear():
+    os.system('clear')
 
 def save():
     with open("gamesave.txt","a") as file:
         file.write(f"{name},{savepoint}\n")
-
 def load():
     with open("gamesave.txt","r") as file:
         file.read(f"{name},{savepoint}")
@@ -162,16 +166,18 @@ def OPEN1():
 
         print(f"Ryu stored the [Bear] in your bag")
         inventory.append("Bear")
-        # subprocess.call(["afplay", "fall.mp3"])
+        subprocess.call(["afplay", "fall.mp3"])
         print("Ryu:What was that sound?!")
         print("It looks like the room on the left side of the house collapsed")
         print(f"Ryu:This is getting interesting...!! Lets go {name}!!!")
         print(f"You chase Ryu and now you have made your step into the house... ")
 
+
         #else:
             #action = input(f"Invalid action, enter reselect or different to select another object \n"
                            #f"Would you like to open the {object}? ")
 
+# now, to clear the screen
 time_limit = 3600
 
 print("\n"
@@ -209,7 +215,7 @@ print("        [Ember, the memory of Inferno]          \n"
 
 
 name = input("Enter your name ")
-
+clear()
 
 print(f"Ryu:Yo! {name} hurry up, The police is gonna come!\n")
 print("You and Ryu has came to explore the abandoned house to know what was going on, \n"
@@ -220,6 +226,7 @@ print(f"Ryu:Why did you have to break the fence?! Because of that now we only ha
 start = time.time()
 print("Ryu:Look at this door... Its actually burned and its still holding the shape")
 OPEN1()
+clear()
 print("The first thing you feel is a keen cold aura that is filling the whole building. \n"
       "You have entered the Entrance room \n")
 
@@ -237,6 +244,7 @@ open_room = False
 
 
 def chapter1():
+
     global in_entrance
     while in_entrance == True:
         dec1 = input("You are in the -Entrance- \n"
@@ -389,7 +397,7 @@ def chapter1():
                 print("The door is locked")
                 in_entrance = True
 chapter1()
-
+clear()
 if "Chapter1" in savepoint:
     def chapter2():
         global main_hall
@@ -559,8 +567,9 @@ if "Chapter1" in savepoint:
                     print("Ending:「Burn to Death」")
                     exit()
     chapter2()
-
+clear()
 if "Chapter2" in savepoint:
+    from Encoder import flame_end
     def chapter3():
         savepoint.remove("Chapter1")
         if concrete_room == True:
@@ -661,13 +670,21 @@ if "Chapter2" in savepoint:
                                   "After all these search in this house, you made your way out of the house.\n"
                                   "---GAME CLEAR---\n"
                                   "Ending: Reluctance")
-            else:
-                print("You are just like the other intruders I guess. Foolish.\n"
-                      "Himiko raised her hand your body instantly ignited, and you burned to death.\n"
-                      "---GAME OVER---\n"
-                      "Ending: In the flame")
-    chapter3()
+                        else:
+                            flame_end()
+                            exit()
+                    else:
+                        flame_end()
+                        exit()
+                else:
+                    flame_end()
+                    exit()
 
+            else:
+                flame_end()
+                exit()
+
+    chapter3()
 end = time.time()
 duration = end - start
 score = time_limit - duration
@@ -677,5 +694,13 @@ with open("database.txt", "a") as file:
     encoded_name = secret_encoder(3, name)
     file.write(f"{encoded_name},{duration:.2f},{round(score)}\n")
     print(f"You took {duration:.2f}sec to finish the game and your score is {round(score)}")
+
+
+satisfactory = int(input("Please enter your satisfactory level on the scale of lowest 1 to highest 5.\n"))
+if satisfactory < 6:
+    with open("Satisfactory.txt","a") as file:
+        file.write(f"{name},{satisfactory}\n")
+else:
+    satisfactory = int(input("Enter your satisfactory level on the scale of lowest 1 to highest 5.\n"))
 
 ```
